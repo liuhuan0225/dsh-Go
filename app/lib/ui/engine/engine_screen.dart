@@ -24,6 +24,7 @@ import '../theme/app_icons.dart';
 import '../theme/theme.dart';
 import '../web/local_web_screen.dart';
 import 'engine_status.dart';
+import 'lan_access_settings.dart';
 import 'local_uninstall.dart';
 import 'log_view.dart';
 import 'workspace_recovery_settings.dart';
@@ -140,6 +141,7 @@ class EngineScreen extends ConsumerWidget {
                 const SafeModeSettingsTiles(showAutoSwitch: false, icon: false),
               ],
             ),
+            if (!missing) const LanAccessSettings(),
             if (!missing)
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
